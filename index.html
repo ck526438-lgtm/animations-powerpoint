@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Animations PowerPoint — Cours Morphose & 27 modèles</title>
+<title>Animations PowerPoint — Cours Morphose, 50 modèles & 1000 cours</title>
 <meta name="description" content="Cours complet pour créer l'effet Morphose « La Terre » dans PowerPoint, plus une galerie de modèles d'animations avec tutoriels pas à pas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 nav ul{display:flex;gap:22px;list-style:none}
 nav ul a{color:var(--mut);text-decoration:none;font-weight:600;font-size:14px}
 nav ul a:hover{color:#fff}
-@media(max-width:700px){nav ul{gap:12px}nav ul li:nth-child(n+3){display:none}}
+@media(max-width:700px){nav ul{gap:12px}nav ul li:nth-child(n+4){display:none}}
 
 /* HERO */
 .hero{position:relative;padding:70px 0 40px;background:radial-gradient(ellipse at 50% 120%,#0c3cb8 0%,#071338 45%,var(--bg) 75%)}
@@ -59,38 +59,6 @@ nav ul a:hover{color:#fff}
 .slide .t-main{color:#fff;font-size:11.5cqw;top:6%}
 .slide .t-out{color:transparent;-webkit-text-stroke:1.4px #fff;font-size:11.5cqw;top:6%;opacity:0}
 .demo-stage{container-type:inline-size}
-/* Planète CSS */
-.planet{position:absolute;border-radius:50%;overflow:hidden;
-  background:#1d4fa8;
-  box-shadow:inset -18px -14px 50px rgba(0,0,0,.85),inset 8px 6px 30px rgba(170,210,255,.35),0 0 60px rgba(70,140,255,.35);
-  transition:all 1.6s cubic-bezier(.65,0,.35,1)}
-.planet::before{content:"";position:absolute;inset:0;width:200%;
-  background:
-   radial-gradient(ellipse 12% 18% at 10% 35%,#3f8a3a 60%,transparent 62%),
-   radial-gradient(ellipse 8% 22% at 18% 62%,#6f8f3c 60%,transparent 62%),
-   radial-gradient(ellipse 14% 10% at 32% 30%,#2f7a37 60%,transparent 62%),
-   radial-gradient(ellipse 9% 16% at 38% 60%,#c9b27a 55%,transparent 60%),
-   radial-gradient(ellipse 6% 9% at 26% 80%,#e9eef5 60%,transparent 62%),
-   radial-gradient(ellipse 12% 18% at 60% 35%,#3f8a3a 60%,transparent 62%),
-   radial-gradient(ellipse 8% 22% at 68% 62%,#6f8f3c 60%,transparent 62%),
-   radial-gradient(ellipse 14% 10% at 82% 30%,#2f7a37 60%,transparent 62%),
-   radial-gradient(ellipse 9% 16% at 88% 60%,#c9b27a 55%,transparent 60%),
-   radial-gradient(ellipse 6% 9% at 76% 80%,#e9eef5 60%,transparent 62%),
-   linear-gradient(#1a4aa0,#1f5cc0 50%,#163f8c);
-  animation:spin 14s linear infinite}
-.planet::after{content:"";position:absolute;inset:0;width:200%;opacity:.75;
-  background:
-   radial-gradient(ellipse 18% 4% at 15% 25%,#fff 40%,transparent 70%),
-   radial-gradient(ellipse 12% 5% at 30% 70%,#fff 40%,transparent 70%),
-   radial-gradient(ellipse 20% 3% at 42% 45%,#fff 40%,transparent 70%),
-   radial-gradient(ellipse 18% 4% at 65% 25%,#fff 40%,transparent 70%),
-   radial-gradient(ellipse 12% 5% at 80% 70%,#fff 40%,transparent 70%),
-   radial-gradient(ellipse 20% 3% at 92% 45%,#fff 40%,transparent 70%);
-  animation:spin 9s linear infinite;filter:blur(1px)}
-.planet .shade{position:absolute;inset:0;border-radius:50%;z-index:2;
-  background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.28),transparent 40%),radial-gradient(circle at 70% 75%,rgba(0,0,0,.65),transparent 60%)}
-@keyframes spin{to{transform:translateX(-50%)}}
-
 /* état diapo 1 */
 .morph .planet{width:46%;aspect-ratio:1;left:27%;top:42%}
 /* état diapo 2 */
@@ -167,8 +135,6 @@ kbd{background:#1a2550;border:1px solid #2c3d78;border-bottom-width:3px;border-r
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px;margin-top:20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.25s;cursor:pointer;display:flex;flex-direction:column}
 .card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 18px 40px rgba(31,107,255,.2)}
-.stage{position:relative;aspect-ratio:16/9;overflow:hidden;container-type:inline-size;
-  background:radial-gradient(ellipse at 50% 120%,#0f43d6 0%,#06185a 45%,#020615 85%)}
 .card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
 .card h3{font-size:17px}
 .card p{font-size:13.5px;color:var(--mut)}
@@ -194,176 +160,9 @@ kbd{background:#1a2550;border:1px solid #2c3d78;border-bottom-width:3px;border-r
 
 footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mut);font-size:14px;text-align:center}
 
-/* ===================== DÉMOS DES MODÈLES ===================== */
-.stage *{position:absolute}
-.big{font:900 13cqw Montserrat,"Arial Black",sans-serif;color:#fff;left:0;right:0;text-align:center;top:50%;transform:translateY(-50%);white-space:nowrap}
-.mid{font:900 9cqw Montserrat,"Arial Black",sans-serif;color:#fff;white-space:nowrap}
-/* 1 planète */
-.d-planete .planet{width:44%;aspect-ratio:1;left:28%;top:44%;animation:pl1 4s cubic-bezier(.65,0,.35,1) infinite alternate}
-.d-planete .t-main,.d-planete .t-out{position:absolute;left:0;right:0;text-align:center;font:900 11cqw Montserrat,"Arial Black",sans-serif;top:8%}
-.d-planete .t-main{color:#fff}
-.d-planete .t-out{color:transparent;-webkit-text-stroke:1px #fff;opacity:0}
-.d-planete .o1{animation:o1 4s cubic-bezier(.65,0,.35,1) infinite alternate}
-.d-planete .o2{animation:o2 4s cubic-bezier(.65,0,.35,1) infinite alternate}
-.d-planete .t-main{animation:tm 4s cubic-bezier(.65,0,.35,1) infinite alternate}
-@keyframes pl1{0%,30%{width:44%;left:28%;top:44%;transform:none}70%,100%{width:62%;left:19%;top:32%;transform:rotate(-14deg)}}
-@keyframes o1{0%,30%{opacity:0;top:8%}70%,100%{opacity:1;top:4%}}
-@keyframes o2{0%,30%{opacity:0;top:8%}70%,100%{opacity:1;top:42%}}
-@keyframes tm{0%,30%{top:8%}70%,100%{top:23%}}
-/* 2 zoom carte */
-.d-zoom .tile{width:40%;height:38%;border-radius:8px;background:#1b3a8f;border:1px solid #4f9bff55}
-.d-zoom .tile:nth-child(1){left:7%;top:8%}.d-zoom .tile:nth-child(2){left:53%;top:8%;background:#3a1b8f}
-.d-zoom .tile:nth-child(3){left:7%;top:54%;background:#8f1b55}
-.d-zoom .tile:nth-child(4){left:53%;top:54%;background:linear-gradient(135deg,var(--gold),#ff6a3d);z-index:2;animation:zt 4s ease-in-out infinite}
-.d-zoom .tile span{position:static;display:grid;place-items:center;height:100%;font:800 5cqw Montserrat,"Arial Black",sans-serif}
-@keyframes zt{0%,25%{left:53%;top:54%;width:40%;height:38%}55%,85%{left:0;top:0;width:100%;height:100%;border-radius:0}100%{left:53%;top:54%;width:40%;height:38%}}
-/* 3 lettres */
-.d-lettres .row{left:0;right:0;top:50%;transform:translateY(-50%);display:flex;justify-content:center;gap:1cqw;position:absolute}
-.d-lettres .row span{position:relative;font:900 13cqw Montserrat,"Arial Black",sans-serif;color:#fff;animation:lt 3.6s cubic-bezier(.65,0,.35,1) infinite alternate}
-.d-lettres .row span:nth-child(1){--x:-20cqw;--y:-18cqw;--r:-40deg;color:var(--gold)}
-.d-lettres .row span:nth-child(2){--x:-6cqw;--y:20cqw;--r:30deg}
-.d-lettres .row span:nth-child(3){--x:4cqw;--y:-22cqw;--r:80deg;color:var(--cyan)}
-.d-lettres .row span:nth-child(4){--x:12cqw;--y:18cqw;--r:-60deg}
-.d-lettres .row span:nth-child(5){--x:22cqw;--y:-12cqw;--r:20deg;color:var(--pink)}
-@keyframes lt{0%,25%{transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(.7)}75%,100%{transform:none}}
-/* 4 rideau balayer */
-.d-balayer .big{animation:wp 3s ease-in-out infinite}
-.d-balayer .bar{left:0;top:30%;height:40%;width:6px;background:var(--gold);animation:wb 3s ease-in-out infinite;box-shadow:0 0 20px var(--gold)}
-@keyframes wp{0%{clip-path:inset(0 100% 0 0)}50%,80%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 100%)}}
-@keyframes wb{0%{left:0}50%,80%{left:calc(100% - 6px)}100%{left:calc(100% - 6px);opacity:0}}
-/* 5 machine à écrire */
-.d-type .mid{left:12%;top:40%;font-size:7cqw;overflow:hidden;width:0;border-right:.6cqw solid var(--gold);animation:ty 4s steps(14) infinite,cr .6s step-end infinite}
-@keyframes ty{0%{width:0}60%,90%{width:14ch}100%{width:0}}
-@keyframes cr{50%{border-color:transparent}}
-/* 6 compteur */
-@property --n{syntax:'<integer>';initial-value:0;inherits:false}
-.d-compteur .big{counter-reset:n var(--n);animation:cn 3.5s cubic-bezier(.2,.7,.2,1) infinite;top:42%}
-.d-compteur .big::after{content:counter(n) " %";position:static}
-.d-compteur .sub{left:0;right:0;text-align:center;top:70%;font:600 4cqw Inter;color:var(--mut)}
-@keyframes cn{0%{--n:0}70%,100%{--n:98}}
-/* 7 carrousel */
-.d-carrousel .it{width:22%;aspect-ratio:3/4;border-radius:10px;top:22%;animation:cr7 6s ease-in-out infinite}
-.d-carrousel .it:nth-child(1){background:linear-gradient(160deg,#ff6a3d,#c4314b)}
-.d-carrousel .it:nth-child(2){background:linear-gradient(160deg,#4f9bff,#1f3bb0);animation-delay:-2s}
-.d-carrousel .it:nth-child(3){background:linear-gradient(160deg,#3fe0ff,#139a7a);animation-delay:-4s}
-@keyframes cr7{0%,25%{left:39%;transform:scale(1.25);z-index:3;opacity:1}33%,58%{left:70%;transform:scale(.8);z-index:1;opacity:.6}66%,91%{left:8%;transform:scale(.8);z-index:1;opacity:.6}100%{left:39%;transform:scale(1.25);z-index:3;opacity:1}}
-/* 8 parallaxe */
-.d-parallaxe .l{bottom:0;height:60%;width:200%;left:0}
-.d-parallaxe .l1{background:radial-gradient(ellipse 15% 70% at 15% 100%,#1b2f74 98%,transparent),radial-gradient(ellipse 18% 60% at 50% 100%,#1b2f74 98%,transparent),radial-gradient(ellipse 15% 70% at 65% 100%,#1b2f74 98%,transparent),radial-gradient(ellipse 18% 60% at 100% 100%,#1b2f74 98%,transparent);animation:px 9s linear infinite}
-.d-parallaxe .l2{height:42%;background:radial-gradient(ellipse 10% 70% at 10% 100%,#0e1a47 98%,transparent),radial-gradient(ellipse 12% 50% at 35% 100%,#0e1a47 98%,transparent),radial-gradient(ellipse 10% 70% at 60% 100%,#0e1a47 98%,transparent),radial-gradient(ellipse 12% 50% at 85% 100%,#0e1a47 98%,transparent);animation:px 5s linear infinite}
-.d-parallaxe .l3{height:18%;background:#050a1f;width:100%}
-.d-parallaxe .moon{width:12%;aspect-ratio:1;border-radius:50%;background:#ffe7a8;top:14%;right:16%;box-shadow:0 0 30px #ffe7a8}
-@keyframes px{to{transform:translateX(-50%)}}
-/* 9 masque texte */
-.d-masque .big{color:transparent;font-size:17cqw;background:linear-gradient(120deg,#ff6a3d,#ffc23d,#3fe0ff,#1f6bff,#ff4f8b,#ff6a3d);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;animation:mk 4s linear infinite}
-@keyframes mk{to{background-position:300% 0}}
-/* 10 graphique */
-.d-graph .b{bottom:15%;width:11%;border-radius:6px 6px 0 0;background:linear-gradient(var(--cyan),var(--blue));animation:gb 3.5s cubic-bezier(.2,.8,.2,1) infinite;transform-origin:bottom}
-.d-graph .b:nth-child(1){left:12%;height:30%}.d-graph .b:nth-child(2){left:28%;height:48%;animation-delay:.15s}
-.d-graph .b:nth-child(3){left:44%;height:38%;animation-delay:.3s}.d-graph .b:nth-child(4){left:60%;height:62%;animation-delay:.45s}
-.d-graph .b:nth-child(5){left:76%;height:72%;animation-delay:.6s;background:linear-gradient(var(--gold),#ff6a3d)}
-.d-graph .axis{left:8%;right:8%;bottom:15%;height:2px;background:#fff6}
-@keyframes gb{0%{transform:scaleY(0)}40%,85%{transform:scaleY(1)}100%{transform:scaleY(0)}}
-/* 11 éventail */
-.d-eventail .c{width:24%;aspect-ratio:3/4;left:38%;top:18%;border-radius:10px;transform-origin:50% 120%;animation:ev 4s ease-in-out infinite alternate;border:2px solid #fff3}
-.d-eventail .c:nth-child(1){background:#c4314b;--r:-36deg}.d-eventail .c:nth-child(2){background:#7a31c4;--r:-18deg}
-.d-eventail .c:nth-child(3){background:#1f6bff;--r:0deg}.d-eventail .c:nth-child(4){background:#139a7a;--r:18deg}
-.d-eventail .c:nth-child(5){background:#ff8a3d;--r:36deg}
-@keyframes ev{0%,20%{transform:rotate(0)}80%,100%{transform:rotate(var(--r))}}
-/* 12 zoom résumé */
-.d-resume .th{width:24%;aspect-ratio:16/9;top:38%;border-radius:6px;border:2px solid #fff5}
-.d-resume .th:nth-child(1){left:6%;background:#1b3a8f}.d-resume .th:nth-child(2){left:38%;background:#8f1b55;animation:rs 5s ease-in-out infinite;z-index:2}
-.d-resume .th:nth-child(3){left:70%;background:#13705a}
-.d-resume .hd{top:12%;left:0;right:0;text-align:center;font:800 5cqw Montserrat,"Arial Black",sans-serif}
-@keyframes rs{0%,30%{left:38%;top:38%;width:24%}50%,80%{left:0;top:0;width:100%;border-radius:0;border-color:transparent}100%{left:38%;top:38%;width:24%}}
-/* 13 vortex */
-.d-vortex .sq{width:30%;aspect-ratio:1;left:35%;top:calc(50% - 15cqw);border-radius:14px;background:conic-gradient(from 0deg,#1f6bff,#3fe0ff,#ff4f8b,#ffc23d,#1f6bff);animation:vx 3.5s cubic-bezier(.7,0,.3,1) infinite}
-@keyframes vx{0%{transform:rotate(0) scale(1)}45%{transform:rotate(720deg) scale(0);opacity:.2}55%{transform:rotate(720deg) scale(0)}100%{transform:rotate(1440deg) scale(1)}}
-/* 14 néon */
-.d-neon{background:#05050c!important}
-.d-neon .big{color:#ffd9f0;text-shadow:0 0 1cqw #fff,0 0 3cqw #ff4f8b,0 0 6cqw #ff4f8b,0 0 12cqw #ff4f8b;animation:nn 2.4s infinite}
-@keyframes nn{0%,18%,22%,25%,53%,57%,100%{opacity:1}20%,24%,55%{opacity:.25;text-shadow:none}}
-/* 15 rebond */
-.d-rebond .ball{width:13%;aspect-ratio:1;border-radius:50%;left:43%;background:radial-gradient(circle at 35% 30%,#fff,#ffc23d 30%,#ff6a3d);animation:bo 1.2s cubic-bezier(.3,0,.7,1) infinite alternate}
-.d-rebond .floor{left:10%;right:10%;bottom:12%;height:2px;background:#fff5}
-.d-rebond .sh{width:13%;height:3%;left:43%;bottom:10%;border-radius:50%;background:#0008;animation:sh 1.2s cubic-bezier(.3,0,.7,1) infinite alternate}
-@keyframes bo{0%{top:8%}90%{transform:scale(1)}100%{top:calc(88% - 13cqw);transform:scale(1.2,.8)}}
-@keyframes sh{0%{transform:scale(.4);opacity:.3}100%{transform:scale(1.2);opacity:1}}
-/* 16 flip */
-.d-flip{perspective:600px}
-.d-flip .card3{width:40%;aspect-ratio:3/2;left:30%;top:calc(50% - 13.3cqw);transform-style:preserve-3d;animation:fl 4s ease-in-out infinite}
-.d-flip .f{inset:0;border-radius:10px;display:grid;place-items:center;font:800 5cqw Montserrat,"Arial Black",sans-serif;backface-visibility:hidden}
-.d-flip .fa{background:linear-gradient(135deg,#1f6bff,#3fe0ff)}
-.d-flip .fb{background:linear-gradient(135deg,#ff6a3d,#ffc23d);transform:rotateY(180deg);color:#1a1200}
-@keyframes fl{0%,30%{transform:rotateY(0)}50%,80%{transform:rotateY(180deg)}100%{transform:rotateY(360deg)}}
-/* 17 glitch */
-.d-glitch{background:#06060a!important}
-.d-glitch .big{animation:gl 2.5s infinite steps(1)}
-.d-glitch .g1{color:#ff004c;mix-blend-mode:screen;animation:g1 2.5s infinite steps(1)}
-.d-glitch .g2{color:#00e5ff;mix-blend-mode:screen;animation:g2 2.5s infinite steps(1)}
-@keyframes g1{0%,70%{transform:translate(0,-50%);clip-path:none}72%{transform:translate(-2cqw,-50%);clip-path:inset(10% 0 55% 0)}76%{transform:translate(2cqw,-50%);clip-path:inset(60% 0 10% 0)}80%{transform:translate(0,-50%);clip-path:none}}
-@keyframes g2{0%,70%{transform:translate(0,-50%)}73%{transform:translate(2cqw,-50%);clip-path:inset(40% 0 30% 0)}78%{transform:translate(-1.5cqw,-50%);clip-path:inset(5% 0 70% 0)}80%{transform:translate(0,-50%);clip-path:none}}
-/* 18 logo reveal */
-.d-logo .circ{width:100%;height:100%;left:0;top:0;background:linear-gradient(135deg,#ff6a3d,#c4314b);animation:lc 4s cubic-bezier(.7,0,.3,1) infinite}
-.d-logo .big{z-index:2;animation:lg 4s cubic-bezier(.7,0,.3,1) infinite}
-@keyframes lc{0%{clip-path:circle(0% at 50% 50%)}35%,80%{clip-path:circle(75% at 50% 50%)}100%{clip-path:circle(0% at 50% 50%)}}
-@keyframes lg{0%,30%{opacity:0;letter-spacing:1em}55%,80%{opacity:1;letter-spacing:.02em}100%{opacity:0}}
-/* 19 timeline */
-.d-timeline .track{left:0;top:48%;width:200%;height:2px;background:#fff4;animation:tl 6s ease-in-out infinite}
-.d-timeline .track i{top:-1.2cqw;width:2.6cqw;height:2.6cqw;border-radius:50%;background:var(--blue2);box-shadow:0 0 12px var(--blue2)}
-.d-timeline .track b{top:3cqw;font:800 4cqw Montserrat,"Arial Black",sans-serif;transform:translateX(-35%)}
-@keyframes tl{0%,15%{transform:translateX(0)}30%,45%{transform:translateX(-25%)}60%,75%{transform:translateX(-50%)}90%,100%{transform:translateX(0)}}
-/* 20 spotlight */
-.d-spot .bg{inset:0;display:grid;grid-template-columns:repeat(4,1fr);gap:4%;padding:8%;position:absolute}
-.d-spot .bg span{position:static;border-radius:8px;background:#2a4aa8}
-.d-spot .mask{inset:0;background:radial-gradient(circle 14cqw at var(--x,30%) 50%,transparent 95%,rgba(0,0,0,.82));animation:sp 5s ease-in-out infinite}
-@property --x{syntax:'<percentage>';initial-value:30%;inherits:false}
-@keyframes sp{0%,20%{--x:20%}40%,60%{--x:50%}80%,100%{--x:80%}}
-/* 21 grille éclatée */
-.d-grille .sq{width:12%;aspect-ratio:1;border-radius:6px;left:44%;top:calc(50% - 6cqw);animation:gx 3.2s cubic-bezier(.65,0,.35,1) infinite alternate}
-@keyframes gx{0%,25%{transform:translate(0,0) rotate(0)}75%,100%{transform:translate(var(--dx),var(--dy)) rotate(var(--rr))}}
-/* 22 trajectoire */
-.d-traj .path{inset:0}
-.d-traj .plane{font-size:7cqw;offset-path:path("M 20 150 C 80 20, 160 20, 200 90 S 300 170, 380 40");offset-rotate:auto;animation:tj 4s ease-in-out infinite;color:#fff;left:0;top:0;line-height:1}
-@keyframes tj{0%{offset-distance:0%}100%{offset-distance:100%}}
-/* 23 bulles */
-.d-bulles .bb{bottom:-20%;border-radius:50%;border:2px solid #9fd2ffaa;background:radial-gradient(circle at 30% 30%,#ffffff55,transparent 60%);animation:bl linear infinite}
-@keyframes bl{to{transform:translateY(-140cqw)}}
-/* 24 rideaux */
-.d-rideaux .big{color:var(--gold)}
-.d-rideaux .p{top:0;height:100%;width:50%;background:repeating-linear-gradient(90deg,#8a0f2a 0 4cqw,#a8173a 4cqw 8cqw);z-index:2}
-.d-rideaux .pl{left:0;animation:rl 4s ease-in-out infinite}.d-rideaux .pr{right:0;animation:rr 4s ease-in-out infinite}
-@keyframes rl{0%,15%{transform:translateX(0)}50%,85%{transform:translateX(-100%)}100%{transform:translateX(0)}}
-@keyframes rr{0%,15%{transform:translateX(0)}50%,85%{transform:translateX(100%)}100%{transform:translateX(0)}}
-/* 25 aurore */
-.d-aurore{background:linear-gradient(120deg,#0b1b5e,#5a1b8f,#0f8b8d,#1f6bff,#0b1b5e)!important;background-size:400% 400%!important;animation:au 8s ease infinite}
-@keyframes au{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-/* 26 engrenages */
-.d-engr .gear{border-radius:50%;border:2.2cqw dotted #c9d6ff;box-shadow:inset 0 0 0 2.5cqw #3a5ab8}
-.d-engr .g1{width:34%;aspect-ratio:1;left:18%;top:20%;animation:rot 6s linear infinite}
-.d-engr .g2{width:24%;aspect-ratio:1;left:51%;top:40%;animation:rot 4.2s linear infinite reverse;border-color:#ffc23d}
-@keyframes rot{to{transform:rotate(360deg)}}
-/* 27 écho */
-.d-echo .e{left:0;right:0;text-align:center;top:50%;font:900 12cqw Montserrat,"Arial Black",sans-serif;transform:translateY(-50%);white-space:nowrap}
-.d-echo .e.f{color:#fff;z-index:2}
-.d-echo .e.o{color:transparent;-webkit-text-stroke:1px #ffffffaa;animation:ec 3s cubic-bezier(.65,0,.35,1) infinite alternate}
-.d-echo .e.o:nth-child(1){--d:-26cqw}.d-echo .e.o:nth-child(2){--d:-13cqw}.d-echo .e.o:nth-child(3){--d:13cqw}.d-echo .e.o:nth-child(4){--d:26cqw}
-@keyframes ec{0%,20%{transform:translateY(-50%)}80%,100%{transform:translateY(calc(-50% + var(--d)))}}
-/* 28 dégradé arrière plan + texte qui monte */
-.d-montee .ln{left:0;right:0;text-align:center;overflow:hidden;height:13cqw}
-.d-montee .ln span{position:relative;display:block;font:900 10cqw Montserrat,"Arial Black",sans-serif;animation:mt 3.6s cubic-bezier(.2,.8,.2,1) infinite}
-.d-montee .ln:nth-child(1){top:22%}.d-montee .ln:nth-child(2){top:48%}.d-montee .ln:nth-child(2) span{animation-delay:.2s;color:var(--gold)}
-@keyframes mt{0%{transform:translateY(110%)}30%,80%{transform:translateY(0)}100%{transform:translateY(-110%)}}
-/* 29 fondu photo Ken Burns */
-.d-ken .img{inset:-10%;background:radial-gradient(circle at 70% 30%,#ffd27a 0 8%,transparent 9%),linear-gradient(#ff9a5a,#c4314b 45%,#2a0f4a 46%,#120624);animation:kb 8s ease-in-out infinite alternate}
-.d-ken .cap{left:6%;bottom:10%;font:800 6cqw Montserrat,"Arial Black",sans-serif}
-@keyframes kb{from{transform:scale(1) translate(0,0)}to{transform:scale(1.25) translate(-5%,4%)}}
-/* 30 morph forme */
-.d-forme .sh{width:30%;aspect-ratio:1;left:35%;top:calc(50% - 15cqw);background:linear-gradient(135deg,var(--cyan),var(--blue));animation:fm 4.5s ease-in-out infinite}
-@keyframes fm{0%,15%{border-radius:50%;transform:rotate(0)}35%,50%{border-radius:8%;transform:rotate(90deg);background:linear-gradient(135deg,var(--gold),#ff6a3d)}70%,85%{border-radius:50% 0 50% 0;transform:rotate(180deg) scale(1.1);background:linear-gradient(135deg,var(--pink),#7a31c4)}100%{border-radius:50%;transform:rotate(360deg)}}
-
 @media (prefers-reduced-motion:reduce){*{animation-duration:0s!important;transition:none!important}}
 </style>
+<link rel="stylesheet" href="assets/demos.css">
 </head>
 <body>
 
@@ -372,6 +171,7 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mut);font-siz
   <ul>
     <li><a href="#cours">Cours</a></li>
     <li><a href="#modeles">Modèles</a></li>
+    <li><a href="bibliotheque.html" style="color:var(--gold)">1000 cours</a></li>
     <li><a href="#quiz">Quiz</a></li>
     <li><a href="#raccourcis">Astuces</a></li>
   </ul>
@@ -381,14 +181,14 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mut);font-siz
   <div>
     <span class="kicker">Cours complet · PowerPoint 365</span>
     <h1>L’effet <span>Morphose</span><br>« LA TERRE »</h1>
-    <p class="lead">Apprends pas à pas à créer cette animation de titre avec une planète 3D qui tourne et un texte en écho, puis explore 30 modèles d’animations PowerPoint, chacun avec son tutoriel.</p>
+    <p class="lead">Apprends pas à pas à créer cette animation de titre avec une planète 3D qui tourne et un texte en écho, puis explore 50 modèles d’animations PowerPoint, chacun avec son tutoriel.</p>
     <div class="btns">
       <a class="btn p" href="#cours">▶ Commencer le cours</a>
-      <a class="btn g" href="#modeles">Voir les 30 modèles</a>
+      <a class="btn g" href="bibliotheque.html">📚 Bibliothèque de 1000 cours</a>
     </div>
     <div class="stats">
       <div>10<small>étapes</small></div>
-      <div>30<small>modèles</small></div>
+      <div>1000<small>cours</small></div>
       <div>~10 min<small>de réalisation</small></div>
     </div>
   </div>
@@ -576,13 +376,14 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mut);font-siz
 <section id="modeles"><div class="wrap">
   <div class="sec-h">
     <span class="kicker">Module 3 · Bibliothèque</span>
-    <h2>30 modèles d’animations PowerPoint</h2>
+    <h2>50 modèles d’animations PowerPoint</h2>
     <p>Chaque carte montre l’animation en direct. Clique dessus pour ouvrir le tutoriel pas à pas à reproduire dans PowerPoint.</p>
   </div>
   <div class="filters" id="filters"></div>
   <input class="search" id="search" placeholder="🔍 Rechercher un modèle (ex. texte, zoom, 3D…)">
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty">Aucun modèle ne correspond à ta recherche.</div>
+  <div style="text-align:center;margin-top:40px"><a class="btn p" href="bibliotheque.html">📚 Voir les 1000 cours (50 techniques × 20 thèmes)</a></div>
 </div></section>
 
 <!-- ================= ASTUCES ================= -->
@@ -621,6 +422,7 @@ footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mut);font-siz
   </div>
 </div></div>
 
+<script src="assets/modeles.js"></script>
 <script>
 /* ---------- Démo hero ---------- */
 const morph=document.getElementById('morph'),chips=document.querySelectorAll('.chip[data-s]');
@@ -668,102 +470,6 @@ Q.forEach((x,i)=>{const d=document.createElement('div');d.className='q';
  qb.appendChild(d)});
 
 /* ---------- Modèles ---------- */
-const sq=(n,cols)=>{let h='';const c=['#1f6bff','#3fe0ff','#ff4f8b','#ffc23d','#7a31c4','#139a7a','#ff6a3d','#4f9bff','#c4314b'];
- for(let i=0;i<n;i++){const a=i/n*Math.PI*2;h+=`<i class="sq" style="background:${c[i%9]};--dx:${(Math.cos(a)*34).toFixed(1)}cqw;--dy:${(Math.sin(a)*20).toFixed(1)}cqw;--rr:${i*45}deg"></i>`}return h};
-const bubbles=()=>{let h='';for(let i=0;i<12;i++){const s=4+((i*37)%9);h+=`<i class="bb" style="left:${(i*8.3)%96}%;width:${s}cqw;height:${s}cqw;animation-duration:${4+(i%5)}s;animation-delay:-${i*.7}s"></i>`}return h};
-const M=[
- {id:'planete',t:'Morphose Planète 3D',c:'Morphose',l:1,d:'L’effet de la vidéo : une Terre 3D qui grossit en tournant et un titre en écho.',
-  h:`<div class="t-out o1">LA TERRE</div><div class="t-main">LA TERRE</div><div class="t-out o2">LA TERRE</div><div class="planet"><div class="shade"></div></div>`,
-  s:['Fond : clic droit → Mise en forme de l’arrière-plan → Dégradé radial noir/bleu.','Insertion → Modèles 3D → Modèles 3D en stock → Espace → Terre.','Écris « LA TERRE » en police très grasse, blanche, et duplique-le 2 fois (Ctrl+D).','Sur les copies : Aucun remplissage + contour blanc 0,75 pt. Superpose les 3 textes.','Duplique la diapositive. Sur la 2ᵉ : écarte les contours, agrandis la Terre et fais-la pivoter en 3D.','Diapo 2 → Transitions → Morphose, durée 2 s.'],
-  tip:'Suis le cours complet plus haut pour tous les détails.'},
- {id:'zoom',t:'Zoom sur une vignette',c:'Morphose',l:1,d:'Une vignette parmi d’autres grandit jusqu’à remplir l’écran.',
-  h:`<div class="tile"><span>01</span></div><div class="tile"><span>02</span></div><div class="tile"><span>03</span></div><div class="tile"><span>04</span></div>`,
-  s:['Diapo 1 : dessine 4 rectangles arrondis en grille (Insertion → Formes).','Mets ton image ou ta couleur dans le rectangle à mettre en avant.','Duplique la diapositive.','Diapo 2 : agrandis ce rectangle pour qu’il couvre toute la diapositive (les autres peuvent rester dessous).','Applique Morphose sur la diapo 2, durée 1,5 s.'],tip:'Parfait pour introduire chaque partie d’un sommaire.'},
- {id:'lettres',t:'Lettres qui s’assemblent',c:'Texte',l:2,d:'Les lettres éparpillées volent pour former le mot.',
-  h:`<div class="row"><span>M</span><span>O</span><span>R</span><span>P</span><span>H</span></div>`,
-  s:['Diapo 1 : écris le mot dans une zone de texte, bien centré.','Duplique la diapositive et revient sur la diapo 1.','Sur la diapo 1, écris chaque lettre dans une zone de texte séparée, éparpille-les et fais-les pivoter.','Sur la diapo 2, garde le mot entier.','Diapo 2 → Morphose → Options d’effet → Caractères.'],tip:'L’option « Caractères » est la clé : PowerPoint relie chaque lettre identique.'},
- {id:'balayer',t:'Révélation par balayage',c:'Entrée',l:1,d:'Le titre se dévoile de gauche à droite derrière une barre lumineuse.',
-  h:`<div class="big">BIENVENUE</div><i class="bar"></i>`,
-  s:['Écris ton titre.','Animations → Balayer → Options d’effet : À partir de la gauche.','Dessine une fine barre dorée et ajoute-lui une trajectoire « Lignes » de gauche à droite.','Règle les deux sur « Avec la précédente », même durée (1 s).'],tip:'Ajoute un effet « Lumière » sur la barre (Format → Effets → Lumière).'},
- {id:'type',t:'Machine à écrire',c:'Texte',l:1,d:'Le texte s’écrit lettre par lettre avec un curseur.',
-  h:`<div class="mid">Bonjour à tous_</div>`,
-  s:['Écris ta phrase dans une zone de texte.','Animations → Apparaître.','Volet Animation → flèche de l’effet → Options d’effet.','Animer le texte : Par lettre, avec un délai de 0,05 à 0,1 s entre les lettres.','Ajoute un son de clavier dans le même onglet si tu veux.'],tip:'Utilise une police à chasse fixe (Consolas, Courier New) pour un rendu rétro.'},
- {id:'compteur',t:'Compteur de chiffres',c:'Données',l:2,d:'Un pourcentage qui défile jusqu’à sa valeur finale.',
-  h:`<div class="big"></div><div class="sub">de satisfaction client</div>`,
-  s:['Crée 5 diapositives identiques avec le nombre : 0 %, 25 %, 50 %, 75 %, 98 %.','Applique Morphose → Options d’effet : Caractères sur chacune.','Durée 0,4 s et « Passer à la diapositive suivante : Après 00:00 ».','Les chiffres vont rouler d’une valeur à l’autre automatiquement.'],tip:'Plus il y a de diapos intermédiaires, plus le défilement est fluide.'},
- {id:'carrousel',t:'Carrousel de produits',c:'Morphose',l:2,d:'Trois cartes tournent : celle du centre passe devant et grossit.',
-  h:`<i class="it"></i><i class="it"></i><i class="it"></i>`,
-  s:['Diapo 1 : 3 images ; celle du centre plus grande et au premier plan.','Duplique la diapo 3 fois.','Sur chaque copie, fais tourner les positions : gauche → centre → droite.','Change l’ordre des calques pour que l’image centrale soit toujours au premier plan.','Morphose sur toutes les diapos, 1,2 s.'],tip:'Ajoute un nom et un prix sous chaque image : ils suivront aussi.'},
- {id:'parallaxe',t:'Paysage en parallaxe',c:'Morphose',l:3,d:'Plusieurs plans se déplacent à des vitesses différentes pour créer de la profondeur.',
-  h:`<i class="moon"></i><i class="l l1"></i><i class="l l2"></i><i class="l l3"></i>`,
-  s:['Prépare 3 calques PNG détourés : montagnes lointaines, collines, sol.','Diapo 1 : empile-les du plus lointain au plus proche.','Duplique la diapo.','Diapo 2 : décale le plan lointain un peu, le plan moyen davantage, le premier plan beaucoup (dépassant de la diapo).','Morphose, durée 3 s.'],tip:'Rends les calques plus larges que la diapositive pour éviter les bords vides.'},
- {id:'masque',t:'Texte rempli d’image',c:'Texte',l:2,d:'Les lettres laissent voir une image ou un dégradé animé.',
-  h:`<div class="big">COLOR</div>`,
-  s:['Écris ton mot en police très grasse et grande.','Insère une image derrière le texte.','Sélectionne l’image PUIS le texte (dans cet ordre).','Forme → Fusionner les formes → Intersection.','Pour l’animer : duplique la diapo, déplace l’image avant la fusion, puis Morphose.'],tip:'Avec « Fragmenter » au lieu d’« Intersection », chaque lettre devient un objet séparé.'},
- {id:'graph',t:'Graphique qui pousse',c:'Données',l:1,d:'Les barres d’un histogramme montent l’une après l’autre.',
-  h:`<i class="axis"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i>`,
-  s:['Insertion → Graphique → Histogramme groupé.','Animations → Effacer, Options d’effet → À partir du bas.','Options d’effet (encore) → Séquence : Par élément de la série.','Démarrage : Après la précédente, durée 0,5 s.'],tip:'Mets en couleur différente la barre à mettre en valeur.'},
- {id:'eventail',t:'Cartes en éventail',c:'Morphose',l:1,d:'Une pile de cartes s’ouvre en éventail.',
-  h:`<i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i>`,
-  s:['Diapo 1 : 5 rectangles arrondis empilés exactement au même endroit.','Duplique la diapositive.','Diapo 2 : fais pivoter chaque carte (-36°, -18°, 0°, 18°, 36°) en gardant le bas aligné.','Morphose, 1,5 s.'],tip:'Idéal pour présenter 5 offres, 5 étapes ou 5 membres d’équipe.'},
- {id:'resume',t:'Zoom de résumé',c:'Navigation',l:1,d:'Une page sommaire interactive qui zoome sur chaque section.',
-  h:`<div class="hd">SOMMAIRE</div><i class="th"></i><i class="th"></i><i class="th"></i>`,
-  s:['Crée tes sections de présentation.','Insertion → Zoom → Zoom de résumé.','Coche la première diapo de chaque partie puis Insérer.','En diaporama, clique sur une vignette : PowerPoint zoome dessus et revient au sommaire à la fin.'],tip:'Format → Options de zoom → coche « Transition de zoom » pour l’effet fluide.'},
- {id:'vortex',t:'Tourbillon (Vortex)',c:'Transition',l:1,d:'La diapositive explose en tourbillon puis se reforme.',
-  h:`<i class="sq"></i>`,
-  s:['Sélectionne la diapositive d’arrivée.','Transitions → Vortex (section « Captivant »).','Options d’effet : À partir de la gauche / du haut…','Durée 2 à 3 s.'],tip:'À réserver aux moments forts : utilisée trop souvent, elle fatigue.'},
- {id:'neon',t:'Néon clignotant',c:'Accentuation',l:2,d:'Un titre lumineux qui grésille comme une enseigne.',
-  h:`<div class="big">OPEN</div>`,
-  s:['Fond noir. Texte rose clair, police fine ou arrondie.','Format → Effets du texte → Lumière : rose, 18 pt.','Duplique le texte et superpose une copie sans lumière.','Sur la copie lumineuse : Animations → Accentuation → Clignotement, ou Disparaître/Apparaître enchaînés très vite (0,1 s).','Répéter : Jusqu’à la fin de la diapositive.'],tip:'Ajoute un léger bourdonnement électrique comme son.'},
- {id:'rebond',t:'Balle qui rebondit',c:'Trajectoire',l:2,d:'Un objet tombe et rebondit avec écrasement.',
-  h:`<i class="floor"></i><i class="sh"></i><i class="ball"></i>`,
-  s:['Dessine un cercle avec un dégradé.','Animations → Ouverture : Rebond.','Ou : Trajectoire Lignes vers le bas + Lissage de fin 100 %, Répéter + Lecture inverse automatique.','Ajoute Accentuation → Agrandir/Réduire (120 % horizontal) synchronisé à l’impact.'],tip:'Une ombre qui grandit sous la balle rend l’effet bien plus réaliste.'},
- {id:'flip',t:'Carte qui se retourne',c:'Morphose',l:2,d:'Une carte pivote en 3D pour montrer son verso.',
-  h:`<div class="card3"><div class="f fa">QUESTION</div><div class="f fb">RÉPONSE</div></div>`,
-  s:['Diapo 1 : un rectangle avec la question.','Format de la forme → Effets → Rotation 3D : Y = 0°.','Duplique la diapo. Sur la diapo 2 : Rotation 3D Y = 90° (la carte devient une ligne).','Diapo 3 : remplace le texte par la réponse, Rotation Y = 0°, autre couleur.','Morphose sur les diapos 2 et 3, durée 0,5 s chacune.'],tip:'Parfait pour des quiz ou des flashcards.'},
- {id:'glitch',t:'Effet Glitch',c:'Texte',l:3,d:'Un texte qui bugue avec décalage rouge et cyan.',
-  h:`<div class="big g1">GLITCH</div><div class="big g2">GLITCH</div><div class="big">GLITCH</div>`,
-  s:['Fond noir. Écris le texte en blanc.','Duplique-le 2 fois : une copie rouge, une copie cyan, placées derrière.','Crée 4 diapos ; sur les diapos 2 et 3, décale les copies de quelques pixels et coupe-les avec Fusionner les formes → Fragmenter.','Morphose très rapide (0,1 s) avec passage automatique.','Diapo 4 : tout revient en place.'],tip:'Ajoute la transition « Paillettes » ou un son de grésillement.'},
- {id:'logo',t:'Révélation de logo',c:'Entrée',l:1,d:'Un cercle s’étend et révèle ton logo ou ta marque.',
-  h:`<i class="circ"></i><div class="big">MARQUE</div>`,
-  s:['Diapo 1 : un tout petit cercle coloré au centre.','Diapo 2 : le même cercle, agrandi pour dépasser de toute la diapo, avec ton logo au-dessus.','Morphose, durée 1,2 s.','Sur le logo : Animations → Zoom ou Estomper, Après la précédente.'],tip:'Excellente ouverture de présentation ou intro de vidéo.'},
- {id:'timeline',t:'Frise chronologique',c:'Morphose',l:2,d:'Une ligne du temps qui défile d’une date à l’autre.',
-  h:`<div class="track"><i style="left:12%"></i><b style="left:12%">2023</b><i style="left:37%"></i><b style="left:37%">2024</b><i style="left:62%"></i><b style="left:62%">2025</b><i style="left:87%"></i><b style="left:87%">2026</b></div>`,
-  s:['Crée une frise très large qui dépasse de la diapo (ligne + points + dates), le tout groupé.','Duplique la diapo autant de fois qu’il y a d’étapes.','Sur chaque copie, déplace le groupe vers la gauche pour centrer l’étape suivante.','Morphose partout, durée 1,5 s.'],tip:'Mets en valeur le point actif (plus gros, autre couleur) sur chaque diapo.'},
- {id:'spot',t:'Projecteur',c:'Accentuation',l:2,d:'Un rond de lumière se déplace pour mettre en avant un élément.',
-  h:`<div class="bg"><span></span><span></span><span></span><span></span></div><i class="mask"></i>`,
-  s:['Dessine un rectangle noir qui couvre la diapo.','Dessine un cercle par-dessus, sélectionne rectangle puis cercle → Fusionner les formes → Combiner : un trou apparaît.','Mets la transparence du noir à 20 %.','Duplique la diapo et déplace le trou sur l’élément suivant.','Morphose, 1 s.'],tip:'Très efficace pour expliquer une capture d’écran ou un tableau.'},
- {id:'grille',t:'Explosion de formes',c:'Morphose',l:1,d:'Des formes regroupées s’éclatent vers l’extérieur.',
-  h:sq(9),
-  s:['Diapo 1 : 9 carrés colorés empilés au centre.','Duplique la diapo.','Diapo 2 : disperse-les en cercle et fais pivoter chacun.','Morphose 1,5 s. Ajoute une diapo 3 identique à la 1 pour l’effet retour.'],tip:'Remplace les carrés par des icônes pour présenter tes services.'},
- {id:'traj',t:'Avion sur trajectoire',c:'Trajectoire',l:2,d:'Un objet suit une courbe dessinée à la main.',
-  h:`<svg class="path" viewBox="0 0 400 225"><path d="M 20 150 C 80 20, 160 20, 200 90 S 300 170, 380 40" fill="none" stroke="#ffffff55" stroke-dasharray="6 6" stroke-width="2"/></svg><div class="plane">✈</div>`,
-  s:['Insère une icône d’avion (Insertion → Icônes).','Animations → Trajectoires → Tracé personnalisé.','Dessine la courbe, double-clique pour terminer.','Options d’effet → Lissage de début/fin à 0,5 s.','Coche « Rotation automatique » pour que l’avion s’oriente selon la courbe (PowerPoint 365).'],tip:'Ajoute une ligne pointillée sur le même tracé pour le sillage.'},
- {id:'bulles',t:'Bulles flottantes',c:'Arrière-plan',l:1,d:'Des bulles montent doucement en fond de diapositive.',
-  h:bubbles(),
-  s:['Dessine des cercles de tailles variées, contour blanc, remplissage transparent à 80 %.','Place-les sous la diapositive (hors cadre).','Ajoute une trajectoire Lignes vers le haut, chacune avec une durée différente (4 à 8 s).','Minutage : Répéter jusqu’à la fin de la diapo, démarrage Avec la précédente avec des délais variés.'],tip:'Fond d’attente parfait avant le début d’une conférence.'},
- {id:'rideaux',t:'Lever de rideau',c:'Transition',l:1,d:'Deux rideaux de théâtre s’ouvrent pour dévoiler la scène.',
-  h:`<div class="big">SHOW</div><i class="p pl"></i><i class="p pr"></i>`,
-  s:['Sélectionne la diapositive d’arrivée.','Transitions → Rideaux (section « Captivant »).','Durée 2 à 3 s.','Variante : 2 rectangles rouges couvrant chacun une moitié, sortis vers les côtés sur la diapo 2 + Morphose.'],tip:'Idéal pour une remise de prix ou un dévoilement de produit.'},
- {id:'aurore',t:'Fond dégradé animé',c:'Arrière-plan',l:2,d:'Un dégradé de couleurs qui ondule lentement.',
-  h:`<div class="big" style="font-size:9cqw">AURORE</div>`,
-  s:['Dessine un rectangle 3 fois plus large que la diapo avec un dégradé linéaire multicolore.','Duplique la diapo.','Diapo 2 : décale le rectangle vers la gauche.','Morphose, durée 5 s, passage automatique, et une diapo 3 qui revient au départ.','Ajoute du texte au-dessus : il restera fixe.'],tip:'Applique un flou artistique (Format de l’image) si tu utilises une image.'},
- {id:'engr',t:'Engrenages qui tournent',c:'Accentuation',l:1,d:'Deux roues dentées qui tournent en sens opposé.',
-  h:`<i class="gear g1"></i><i class="gear g2"></i>`,
-  s:['Insertion → Icônes → recherche « engrenage ». Insère-en deux.','Animations → Accentuation → Rotation.','Engrenage 1 : sens horaire ; engrenage 2 : Options d’effet → Antihoraire.','Minutage : Répéter jusqu’à la fin de la diapositive, Lissage à 0.'],tip:'Illustre parfaitement un processus ou une méthode.'},
- {id:'echo',t:'Titre en écho',c:'Texte',l:1,d:'Des copies en contour s’écartent du titre (variante de l’effet Terre).',
-  h:`<div class="e o">IMPACT</div><div class="e o">IMPACT</div><div class="e o">IMPACT</div><div class="e o">IMPACT</div><div class="e f">IMPACT</div>`,
-  s:['Écris ton titre en blanc plein, très gras.','Duplique-le 4 fois : Aucun remplissage + contour blanc 1 pt.','Diapo 1 : tout superposé.','Diapo 2 (dupliquée) : écarte 2 contours vers le haut et 2 vers le bas, espacement régulier.','Morphose 1,5 s.'],tip:'Baisse la transparence des contours les plus éloignés pour un effet de profondeur.'},
- {id:'montee',t:'Texte qui monte',c:'Texte',l:2,d:'Chaque ligne apparaît en glissant depuis une fente invisible.',
-  h:`<div class="ln"><span>CRÉE</span></div><div class="ln"><span>L’IMPACT</span></div>`,
-  s:['Écris chaque ligne dans une zone de texte séparée.','Animations → Ouverture → Balayer, Options d’effet : À partir du bas.','Ajoute aussi Ouverture → Monter (Atténuer et monter), Avec la précédente.','Décale la 2ᵉ ligne de 0,2 s.'],tip:'Pour un masque parfait : dessine un rectangle couleur du fond par-dessus la zone de départ.'},
- {id:'ken',t:'Effet Ken Burns',c:'Image',l:1,d:'Un zoom lent et un panoramique sur une photo, façon documentaire.',
-  h:`<i class="img"></i><div class="cap">Coucher de soleil</div>`,
-  s:['Insère une photo plein écran.','Animations → Accentuation → Agrandir/Réduire, 115 %, durée 8 s.','Ajoute une trajectoire Lignes très courte, Avec la précédente, même durée.','Mets lissage de début et de fin à 0 pour un mouvement constant.'],tip:'Variante Morphose : agrandis et décale la photo sur une diapo dupliquée, durée 6 s.'},
- {id:'forme',t:'Formes qui se transforment',c:'Morphose',l:2,d:'Un cercle devient carré puis feuille en changeant de couleur.',
-  h:`<i class="sh"></i>`,
-  s:['Diapo 1 : un cercle bleu.','Diapo 2 : un carré orange ; diapo 3 : une forme de goutte rose.','Dans le Volet Sélection (Alt+F10), nomme la forme « !!forme » sur les 3 diapos.','Morphose sur les diapos 2 et 3, durée 1,5 s.'],tip:'Le préfixe !! oblige PowerPoint à transformer une forme en une autre.'}
-];
 const cats=['Tous',...new Set(M.map(m=>m.c))];
 const lv=['','Débutant','Intermédiaire','Avancé'];
 const grid=document.getElementById('grid'),fl=document.getElementById('filters'),search=document.getElementById('search');
@@ -773,14 +479,14 @@ cats.forEach(c=>{const b=document.createElement('button');b.className='chip'+(c=
 function render(){const q=search.value.toLowerCase().trim();grid.innerHTML='';let n=0;
  M.forEach(m=>{if(cat!='Tous'&&m.c!=cat)return;if(q&&!(m.t+' '+m.d+' '+m.c).toLowerCase().includes(q))return;n++;
   const el=document.createElement('div');el.className='card';
-  el.innerHTML=`<div class="stage d-${m.id}">${m.h}</div><div class="body"><h3>${m.t}</h3><p>${m.d}</p>
+  el.innerHTML=`<div class="stage d-${m.id}">${demoHTML(m)}</div><div class="body"><h3>${m.t}</h3><p>${m.d}</p>
    <div class="tags"><span class="tag">${m.c}</span><span class="tag lvl${m.l}">● ${lv[m.l]}</span><span class="tag">${m.s.length} étapes</span></div></div>`;
   el.onclick=()=>openM(m);grid.appendChild(el)});
  document.getElementById('empty').style.display=n?'none':'block'}
 search.oninput=render;render();
 
 const modal=document.getElementById('modal');
-function openM(m){document.getElementById('mstage').className='stage d-'+m.id;document.getElementById('mstage').innerHTML=m.h;
+function openM(m){document.getElementById('mstage').className='stage d-'+m.id;document.getElementById('mstage').innerHTML=demoHTML(m);
  document.getElementById('mcontent').innerHTML=`<span class="kicker">${m.c}</span><h3 style="margin-top:12px">${m.t}</h3><p style="color:var(--mut)">${m.d}</p>
   <ol>${m.s.map(x=>`<li>${x}</li>`).join('')}</ol><div class="tip i"><span>💡</span><div>${m.tip}</div></div>`;
  document.getElementById('mmeta').innerHTML=`<div><small>Niveau</small><b class="lvl${m.l}">${lv[m.l]}</b></div><div><small>Outil principal</small><b>${m.c=='Transition'||m.c=='Morphose'?'Onglet Transitions':m.c=='Navigation'?'Insertion → Zoom':'Onglet Animations'}</b></div>`;

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bibliothèque — 1000 cours d’animations PowerPoint</title>
+<meta name="description" content="1000 cours d'animations PowerPoint : 50 techniques déclinées pour 20 thèmes (mariage, business, église, école, restaurant…), avec démo animée et tutoriel pas à pas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/demos.css">
+<style>
+:root{--bg:#05070f;--bg2:#0a1024;--card:#0e1630;--line:#1d2a52;--blue:#1f6bff;--blue2:#4f9bff;--cyan:#3fe0ff;--gold:#ffc23d;--pink:#ff4f8b;--txt:#e8eeff;--mut:#93a0c4;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:Montserrat,"Arial Black",sans-serif;line-height:1.15}
+a{color:var(--blue2)}
+.wrap{max-width:1240px;margin:auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:rgba(5,7,15,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font:900 18px Montserrat,"Arial Black",sans-serif;display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none}
+.logo b{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#ff6a3d,#c4314b);font-size:16px}
+nav a.back{color:var(--mut);text-decoration:none;font-weight:600;font-size:14px}
+.hero{padding:50px 0 30px;background:radial-gradient(ellipse at 50% 140%,#0c3cb8 0%,#071338 45%,var(--bg) 75%)}
+.kicker{display:inline-block;font:700 12px Montserrat,"Arial Black",sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--gold);background:rgba(255,194,61,.1);border:1px solid rgba(255,194,61,.3);padding:6px 12px;border-radius:99px}
+.hero h1{font-size:clamp(32px,5vw,56px);font-weight:900;margin:14px 0 10px}
+.hero h1 span{background:linear-gradient(90deg,var(--gold),#ff7a3d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);max-width:720px}
+.themes{display:flex;gap:8px;overflow-x:auto;padding:18px 0 4px;scrollbar-width:thin}
+.th{flex:none;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--txt);font:600 13px Inter;cursor:pointer;white-space:nowrap}
+.th.on{border-color:var(--gold);background:rgba(255,194,61,.12)}
+.th i{width:10px;height:10px;border-radius:50%}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 6px;align-items:center}
+.bar select,.bar input{padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--txt);font:500 14px Inter}
+.bar input{flex:1;min-width:220px}
+.count{color:var(--mut);font-size:14px;margin:6px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-top:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.25s;cursor:pointer;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .no{font:800 11px Montserrat,"Arial Black",sans-serif;color:var(--gold);letter-spacing:1px}
+.card h3{font-size:15.5px}
+.card p{font-size:13px;color:var(--mut)}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.tag{font:600 11px Inter;padding:3px 9px;border-radius:99px;background:#0a1230;border:1px solid var(--line);color:#b9c4e6}
+.lvl1{color:#2ecc71}.lvl2{color:var(--gold)}.lvl3{color:var(--pink)}
+.pager{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:34px 0 60px}
+.pager button{min-width:40px;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--txt);font:600 14px Inter;cursor:pointer}
+.pager button.on{background:var(--blue);border-color:var(--blue)}
+.pager button:disabled{opacity:.35;cursor:default}
+.empty{color:var(--mut);padding:50px;text-align:center}
+
+/* Page cours */
+#course{display:none;padding:30px 0 70px}
+body.reading #list{display:none}body.reading #course{display:block}body.reading .hero{display:none}
+.crumbs{font-size:14px;color:var(--mut);margin-bottom:18px}
+.crumbs a{color:var(--mut);cursor:pointer}
+.cgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:start}
+@media(max-width:900px){.cgrid{grid-template-columns:1fr}}
+.cgrid .stage{border-radius:16px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.ctitle{font-size:clamp(26px,3.4vw,38px);margin:10px 0}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;margin-top:18px}
+.box h4{font-size:17px;margin-bottom:10px;display:flex;gap:10px;align-items:center}
+.box ol{padding-left:22px}.box li{margin-bottom:9px;color:#cdd6f2;font-size:15px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+@media(max-width:600px){.facts{grid-template-columns:repeat(2,1fr)}}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13px}
+.facts small{display:block;color:var(--mut)}
+.pal{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.pal span{display:flex;align-items:center;gap:6px;font:600 12px Inter;background:#0a1230;border:1px solid var(--line);padding:4px 10px 4px 4px;border-radius:99px}
+.pal i{width:18px;height:18px;border-radius:50%;border:1px solid #fff3}
+.tip{display:flex;gap:12px;padding:14px 16px;border-radius:12px;margin-top:12px;font-size:14px;background:rgba(63,224,255,.08);border:1px solid rgba(63,224,255,.25)}
+.tip.ex{background:rgba(255,194,61,.08);border-color:rgba(255,194,61,.3)}
+.navc{display:flex;justify-content:space-between;gap:10px;margin-top:24px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;font:700 14px Montserrat,"Arial Black",sans-serif;text-decoration:none;cursor:pointer;border:1px solid var(--line);background:var(--card);color:#fff}
+.btn.p{background:var(--blue);border-color:var(--blue)}
+.done{display:flex;align-items:center;gap:10px;margin-top:18px;cursor:pointer;color:var(--mut);font-size:14px}
+.done input{width:18px;height:18px;accent-color:var(--blue)}
+.rel{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:14px}
+.rel .card h3{font-size:13.5px}.rel .card .body{padding:10px 12px}
+.seen{position:absolute;top:8px;right:8px;z-index:5;font:700 11px Inter;background:#2ecc71;color:#05210f;padding:2px 8px;border-radius:99px}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mut);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="index.html"><b>P</b> Animations PPT</a>
+  <a class="back" href="index.html">← Cours « La Terre »</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="kicker">Bibliothèque</span>
+  <h1><span>1000 cours</span> d’animations PowerPoint</h1>
+  <p>50 techniques d’animation déclinées pour 20 thèmes concrets. Chaque cours contient une démo aux couleurs du thème, les étapes dans PowerPoint, l’adaptation au thème (textes, palette, polices, rythme) et un exercice pratique.</p>
+  <div class="themes" id="themes"></div>
+</div></header>
+
+<main class="wrap">
+  <div id="list">
+    <div class="bar">
+      <input id="q" placeholder="🔍 Rechercher : mariage, compteur, néon, 3D…">
+      <select id="fcat"></select>
+      <select id="flvl"><option value="">Tous niveaux</option><option value="1">Débutant</option><option value="2">Intermédiaire</option><option value="3">Avancé</option></select>
+      <select id="fseen"><option value="">Tous les cours</option><option value="todo">À faire</option><option value="done">Terminés</option></select>
+    </div>
+    <div class="count" id="count"></div>
+    <div class="grid" id="grid"></div>
+    <div class="pager" id="pager"></div>
+  </div>
+  <div id="course"></div>
+</main>
+
+<footer><div class="wrap">Bibliothèque de cours PowerPoint · Démos en HTML/CSS illustrant les effets à reproduire dans PowerPoint. PowerPoint est une marque de Microsoft ; site indépendant.</div></footer>
+
+<script src="assets/modeles.js"></script>
+<script>
+/* ---------- 20 thèmes ---------- */
+const T=[
+ {k:'business',n:'Business',pour:'une présentation d’entreprise',ic:'💼',c:['#1f6bff','#3fe0ff','#ffc23d','#7a8cff'],b:['#1450d8','#081d5c'],w:'CROISSANCE',p:'Résultats 2026',font:'Montserrat ou Segoe UI Bold',fond:'dégradé radial bleu nuit vers noir, sobre et corporate',ry:'rythme dynamique mais posé : 1 à 1,5 s par transition',ex:'présente les 3 chiffres clés de ton entreprise sur 3 diapositives',tp:'Garde le logo de l’entreprise fixe dans un coin : il ne doit pas bouger d’une diapo à l’autre.'},
+ {k:'mariage',n:'Mariage',pour:'un mariage',ic:'💍',c:['#c9a24d','#f3e3c3','#e8b4b8','#ffffff'],b:['#8a6a3a','#2a1a14'],w:'OUI !',p:'Awa & Koffi',font:'Playfair Display ou Great Vibes',fond:'dégradé or champagne vers brun profond',ry:'lent et élégant : allonge toutes les durées d’environ 30 %',ex:'crée le diaporama « notre histoire » avec 5 dates clés du couple',tp:'Les animations rapides cassent l’émotion : privilégie fondus et Morphose lentes.'},
+ {k:'eglise',n:'Église & culte',pour:'un culte ou une église',ic:'⛪',c:['#7a5cff','#c7b8ff','#ffd27a','#ffffff'],b:['#3a2a8a','#0e0a2a'],w:'GLOIRE',p:'Psaume 23',font:'Cinzel ou Georgia',fond:'dégradé violet profond avec une lueur dorée en bas',ry:'calme : 1,5 à 2 s, sans effets agressifs',ex:'prépare l’affichage d’un chant avec un couplet par diapositive',tp:'Le texte doit rester lisible depuis le fond de la salle : 40 pt minimum.'},
+ {k:'ecole',n:'École & cours',pour:'un cours en classe',ic:'🎒',c:['#2ecc71','#3fe0ff','#ffc23d','#ff6a3d'],b:['#138a4a','#06301c'],w:'LEÇON 1',p:'Les fractions',font:'Nunito ou Comic Neue',fond:'dégradé vert tableau vers vert très sombre',ry:'clair et lent pour laisser le temps de lire',ex:'fais apparaître une question puis sa réponse au clic',tp:'Une seule idée par diapositive : l’animation doit aider à comprendre, pas distraire.'},
+ {k:'universite',n:'Soutenance',pour:'une soutenance de mémoire',ic:'🎓',c:['#1f6bff','#9fc3ff','#ffc23d','#ffffff'],b:['#0d3a9a','#05102e'],w:'MÉMOIRE',p:'Problématique',font:'Lato ou Calibri',fond:'dégradé bleu académique sobre',ry:'sobre : animations courtes (0,5 à 1 s)',ex:'anime le plan de ta soutenance en 4 parties',tp:'Le jury veut du fond : limite-toi à 2 types d’animation dans toute la présentation.'},
+ {k:'marketing',n:'Marketing',pour:'une campagne marketing',ic:'📣',c:['#ff4f8b','#ffc23d','#3fe0ff','#ff6a3d'],b:['#c4214b','#2a0614'],w:'PROMO',p:'-50 % ce week-end',font:'Poppins Black ou Anton',fond:'dégradé rose vif vers prune',ry:'punchy : 0,5 à 1 s, enchaînements rapides',ex:'crée une pub de 15 s pour un produit, exportée en vidéo',tp:'Exporte en 1080×1920 pour les Reels et Statuts WhatsApp.'},
+ {k:'startup',n:'Pitch startup',pour:'un pitch de startup',ic:'🚀',c:['#7a31ff','#3fe0ff','#2ecc71','#ff4f8b'],b:['#4a1ab8','#0c0628'],w:'PITCH',p:'Le problème',font:'Inter Black ou Montserrat',fond:'dégradé violet électrique vers noir',ry:'énergique : 1 s, Morphose entre chaque section',ex:'construis les 3 diapos « Problème → Solution → Marché »',tp:'10 diapositives, 20 minutes, 30 pt minimum : la règle 10/20/30 reste valable.'},
+ {k:'tech',n:'Tech & IA',pour:'une présentation tech ou IA',ic:'🤖',c:['#00e5ff','#2ecc71','#7a31ff','#ff4f8b'],b:['#006a8a','#02101a'],w:'IA 2026',p:'Machine learning',font:'Space Grotesk ou Consolas',fond:'dégradé cyan sombre vers noir, avec une grille fine',ry:'précis et rapide : 0,6 à 1 s',ex:'explique un flux de données en 4 étapes animées',tp:'Ajoute une grille de lignes fines à 10 % d’opacité pour un look « interface ».'},
+ {k:'sante',n:'Santé',pour:'une sensibilisation santé',ic:'🩺',c:['#13b5a5','#a8f0e6','#ff6a6a','#ffffff'],b:['#0b7a70','#032a26'],w:'PRÉVENIR',p:'Lavez-vous les mains',font:'Open Sans ou Source Sans',fond:'dégradé turquoise vers vert très sombre',ry:'rassurant : 1 à 1,5 s, sans flash',ex:'anime les 4 gestes de prévention avec icônes',tp:'Évite tout clignotement rapide : certaines personnes y sont sensibles.'},
+ {k:'sport',n:'Sport',pour:'un événement sportif',ic:'⚽',c:['#ff6a3d','#ffc23d','#2ecc71','#ffffff'],b:['#c44a1a','#2a0a04'],w:'MATCH',p:'Finale du tournoi',font:'Bebas Neue ou Anton',fond:'dégradé orange feu vers noir',ry:'explosif : 0,4 à 0,8 s',ex:'présente la composition de l’équipe joueur par joueur',tp:'Utilise des inclinaisons (-8°) sur les titres pour donner de la vitesse.'},
+ {k:'voyage',n:'Voyage & tourisme',pour:'une agence de voyage',ic:'✈️',c:['#2fb8ff','#ffd27a','#2ecc71','#ff6a3d'],b:['#1a7ac4','#062038'],w:'ÉVASION',p:'Destination Assinie',font:'Montserrat ou Raleway',fond:'dégradé bleu lagon vers bleu nuit',ry:'fluide : 1,5 à 2 s, Morphose et Ken Burns',ex:'crée un itinéraire de 3 étapes sur une carte',tp:'Des photos plein écran valent mieux que du texte : 6 mots maximum par diapo.'},
+ {k:'restaurant',n:'Restaurant',pour:'un menu de restaurant',ic:'🍽️',c:['#ff8a3d','#ffd27a','#c4314b','#ffffff'],b:['#a8421a','#2a0c04'],w:'MENU',p:'Plat du jour',font:'Playfair Display ou Lora',fond:'dégradé terracotta vers brun',ry:'gourmand et posé : 1,2 s',ex:'crée un menu animé en boucle pour un écran en salle',tp:'Mets la diapositive en boucle : Diaporama → Configurer → Exécution en continu.'},
+ {k:'immobilier',n:'Immobilier',pour:'une présentation immobilière',ic:'🏠',c:['#2ecc71','#ffc23d','#9fc3ff','#ffffff'],b:['#16804a','#04201a'],w:'À VENDRE',p:'Villa 4 pièces',font:'Montserrat ou Barlow',fond:'dégradé vert émeraude vers noir',ry:'élégant : 1,5 s',ex:'présente un bien en 5 photos avec prix et surface',tp:'Le prix et la surface doivent apparaître en dernier : c’est l’effet « révélation ».'},
+ {k:'mode',n:'Mode & beauté',pour:'une marque de mode',ic:'👗',c:['#ff4f8b','#ffd1e1','#c9a24d','#ffffff'],b:['#a8204e','#1a0410'],w:'COLLECTION',p:'Été 2026',font:'Didot ou Playfair Display',fond:'dégradé rose poudré vers noir',ry:'chic : 1,5 à 2 s, beaucoup d’espace vide',ex:'crée un lookbook de 4 tenues',tp:'Utilise beaucoup de vide autour du produit : le luxe respire.'},
+ {k:'finance',n:'Finance',pour:'un rapport financier',ic:'📈',c:['#2ecc71','#3fe0ff','#ffc23d','#ff4f6b'],b:['#0f6a3a','#02160c'],w:'BILAN',p:'Chiffre d’affaires',font:'IBM Plex Sans ou Calibri',fond:'dégradé vert sombre et sobre',ry:'factuel : 0,8 à 1 s',ex:'anime l’évolution d’un indicateur sur 4 trimestres',tp:'Vert pour la hausse, rouge pour la baisse : n’inverse jamais ce code.'},
+ {k:'musique',n:'Musique & concert',pour:'un concert',ic:'🎤',c:['#ff2fd1','#7a31ff','#00e5ff','#ffc23d'],b:['#8a0a78','#12021a'],w:'LIVE',p:'Ce samedi à 20 h',font:'Anton ou Bebas Neue',fond:'dégradé magenta vers violet nuit',ry:'au rythme du son : cale tes animations sur le tempo',ex:'crée une affiche animée de concert de 10 s',tp:'Insère la musique et coche « Exécution en arrière-plan » dans l’onglet Lecture.'},
+ {k:'gaming',n:'Gaming',pour:'une chaîne gaming',ic:'🎮',c:['#39ff14','#00e5ff','#ff2fd1','#ffc23d'],b:['#1a7a0a','#020a02'],w:'LEVEL UP',p:'Tournoi en ligne',font:'Press Start 2P ou Orbitron',fond:'dégradé vert néon vers noir',ry:'nerveux : 0,3 à 0,6 s',ex:'crée une intro de vidéo de 5 s',tp:'Les effets néon et glitch sont tes meilleurs alliés dans ce thème.'},
+ {k:'ecologie',n:'Écologie',pour:'une campagne écologique',ic:'🌱',c:['#6fcf3c','#c8f08a','#2fb8ff','#ffffff'],b:['#3a8a1a','#0a2004'],w:'PLANÈTE',p:'Agissons maintenant',font:'Quicksand ou Nunito',fond:'dégradé vert feuille vers vert forêt',ry:'naturel : 1,5 s, mouvements doux',ex:'montre 3 gestes écologiques avec leurs chiffres d’impact',tp:'Le modèle 3D de la Terre du cours principal est parfait pour ce thème.'},
+ {k:'evenement',n:'Événement & gala',pour:'un gala ou une cérémonie',ic:'🎉',c:['#ffc23d','#ff4f8b','#ffffff','#c9a24d'],b:['#8a5a0a','#1a0e02'],w:'GALA 2026',p:'Remise des prix',font:'Cinzel ou Playfair Display',fond:'dégradé or vers noir, avec paillettes',ry:'solennel puis festif : 2 s pour les révélations',ex:'crée la révélation d’un gagnant avec roulement de tambour',tp:'Une diapositive « en attente » en boucle avant le début fait très professionnel.'},
+ {k:'admin',n:'Administration',pour:'une administration publique',ic:'🏛️',c:['#ff8a00','#ffffff','#1a9a4a','#9fc3ff'],b:['#1a3a6a','#050e1e'],w:'RAPPORT',p:'Bilan annuel',font:'Arial ou Segoe UI',fond:'dégradé bleu institutionnel',ry:'sobre : 0,8 s, transitions Fondu et Morphose uniquement',ex:'présente l’organigramme d’un service en 3 niveaux',tp:'Reste sobre : une administration doit inspirer confiance et sérieux.'}
+];
+const LV=['','Débutant','Intermédiaire','Avancé'];
+const OUT=c=>c=='Transition'||c=='Morphose'?'Onglet Transitions':c=='Navigation'?'Insertion → Zoom':'Onglet Animations';
+
+/* ---------- génération des 1000 cours ---------- */
+const C=[];
+for(let k=0;k<M.length*T.length;k++){
+  const ti=k%M.length, hi=(Math.floor(k/M.length)+ti)%T.length;
+  const m=M[ti],th=T[hi];
+  C.push({n:k+1,m,th,ti,hi,
+    t:`${m.t} pour ${th.pour}`,
+    min:4+m.l*4+m.s.length,
+    txt:(m.t+' '+m.d+' '+m.c+' '+th.n+' '+th.pour+' '+th.k).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')});
+}
+
+/* ---------- état ---------- */
+let SEEN={};try{SEEN=JSON.parse(localStorage.getItem('ppt-seen')||'{}')}catch(e){}
+const saveSeen=()=>{try{localStorage.setItem('ppt-seen',JSON.stringify(SEEN))}catch(e){}};
+let theme='',page=1;const PER=24;
+const $=id=>document.getElementById(id);
+
+/* filtres */
+const thBox=$('themes');
+[{k:'',n:'Tous les thèmes',ic:'✨'},...T].forEach(t=>{const b=document.createElement('button');b.className='th'+(t.k==''?' on':'');
+ b.innerHTML=`${t.ic} ${t.n}`+(t.c?`<i style="background:${t.c[0]}"></i>`:'');b.onclick=()=>{theme=t.k;thBox.querySelectorAll('.th').forEach(x=>x.classList.toggle('on',x==b));page=1;render()};thBox.appendChild(b)});
+$('fcat').innerHTML='<option value="">Toutes les techniques</option>'+[...new Set(M.map(m=>m.c))].map(c=>`<option>${c}</option>`).join('');
+['q','fcat','flvl','fseen'].forEach(id=>$(id).addEventListener('input',()=>{page=1;render()}));
+
+function cardHTML(c,small){
+  return `<a class="card" href="#c-${c.n}"><div class="stage d-${c.m.id}" style="${stageStyle(c.th)}">${SEEN[c.n]?'<span class="seen">✓ Fait</span>':''}${demoHTML(c.m,c.th)}</div>
+   <div class="body"><span class="no">COURS N° ${c.n}</span><h3>${c.t}</h3>${small?'':`<p>${c.m.d}</p>`}
+   <div class="tags"><span class="tag">${c.th.ic} ${c.th.n}</span><span class="tag">${c.m.c}</span>${small?'':`<span class="tag lvl${c.m.l}">● ${LV[c.m.l]}</span>`}</div></div></a>`;
+}
+function filtered(){
+  const q=$('q').value.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').trim().split(/\s+/).filter(Boolean);
+  const cat=$('fcat').value,lv=$('flvl').value,sn=$('fseen').value;
+  return C.filter(c=>(!theme||c.th.k==theme)&&(!cat||c.m.c==cat)&&(!lv||c.m.l==lv)&&
+    (!sn||(sn=='done'?SEEN[c.n]:!SEEN[c.n]))&&q.every(w=>c.txt.includes(w)||String(c.n)==w));
+}
+function render(){
+  const L=filtered(),pages=Math.max(1,Math.ceil(L.length/PER));page=Math.min(page,pages);
+  const done=Object.keys(SEEN).length;
+  $('count').textContent=`${L.length} cours trouvés · ${done} / 1000 terminés`;
+  $('grid').innerHTML=L.slice((page-1)*PER,page*PER).map(c=>cardHTML(c)).join('')||'<div class="empty">Aucun cours ne correspond.</div>';
+  const P=$('pager');P.innerHTML='';
+  const add=(lbl,p,dis,on)=>{const b=document.createElement('button');b.textContent=lbl;b.disabled=dis;if(on)b.className='on';b.onclick=()=>{page=p;render();scrollTo({top:$('list').offsetTop-80,behavior:'smooth'})};P.appendChild(b)};
+  add('‹',page-1,page==1);
+  const set=new Set([1,pages,page-1,page,page+1,page-2,page+2].filter(x=>x>=1&&x<=pages));let last=0;
+  [...set].sort((a,b)=>a-b).forEach(p=>{if(p-last>1){const s=document.createElement('span');s.textContent='…';s.style.cssText='color:var(--mut);padding:8px';P.appendChild(s)}add(p,p,false,p==page);last=p});
+  add('›',page+1,page==pages);
+}
+
+/* ---------- page d'un cours ---------- */
+function showCourse(n){
+  const c=C[n-1];if(!c){document.body.classList.remove('reading');return}
+  const {m,th}=c;
+  const adapt=[
+    `<b>Arrière-plan :</b> ${th.fond} (clic droit → Mise en forme de l’arrière-plan → Remplissage dégradé).`,
+    `<b>Textes :</b> remplace les textes d’exemple par « ${th.w} » pour le titre et « ${th.p} » pour le sous-titre.`,
+    `<b>Police :</b> ${th.font}. Si elle n’est pas installée, Accueil → Police → choisis la plus proche.`,
+    `<b>Couleurs :</b> utilise la palette ci-dessous. Pour la réutiliser partout : Conception → Variantes → Couleurs → Personnaliser les couleurs.`,
+    `<b>Rythme :</b> ${th.ry}.`
+  ];
+  const same=C.filter(x=>x.ti==c.ti&&x.n!=n).slice(0,4),other=C.filter(x=>x.hi==c.hi&&x.n!=n).sort((a,b)=>((a.n*7919)%97)-((b.n*7919)%97)).slice(0,4);
+  $('course').innerHTML=`
+   <div class="crumbs"><a onclick="goList()">Bibliothèque</a> › ${th.ic} ${th.n} › Cours n° ${n}</div>
+   <div class="cgrid">
+    <div>
+      <div class="stage d-${m.id}" style="${stageStyle(th)}">${demoHTML(m,th)}</div>
+      <div class="facts">
+        <div><small>Niveau</small><b class="lvl${m.l}">${LV[m.l]}</b></div>
+        <div><small>Durée estimée</small><b>${c.min} min</b></div>
+        <div><small>Outil principal</small><b>${OUT(m.c)}</b></div>
+        <div><small>Technique</small><b>${m.c}</b></div>
+        <div><small>Thème</small><b>${th.ic} ${th.n}</b></div>
+        <div><small>Version</small><b>PowerPoint 365 / 2019+</b></div>
+      </div>
+      <div class="box"><h4>🎨 Palette du thème</h4><div class="pal">${th.c.map(x=>`<span><i style="background:${x}"></i>${x.toUpperCase()}</span>`).join('')}${th.b.map(x=>`<span><i style="background:${x}"></i>${x.toUpperCase()} (fond)</span>`).join('')}</div></div>
+    </div>
+    <div>
+      <span class="kicker">Cours n° ${n} / 1000</span>
+      <h1 class="ctitle">${c.t}</h1>
+      <p style="color:var(--mut)">${m.d} Dans ce cours, tu l’appliques à ${th.pour}.</p>
+      <div class="box"><h4>🛠️ Étapes dans PowerPoint</h4><ol>${m.s.map(s=>`<li>${s}</li>`).join('')}</ol></div>
+      <div class="box"><h4>${th.ic} Adapter au thème « ${th.n} »</h4><ol>${adapt.map(s=>`<li>${s}</li>`).join('')}</ol>
+        <div class="tip"><span>💡</span><div>${m.tip} ${th.tp}</div></div></div>
+      <div class="box"><h4>✍️ Exercice pratique</h4><p style="color:#cdd6f2">Avec l’effet « ${m.t} », ${th.ex}. Teste avec <kbd style="background:#1a2550;border:1px solid #2c3d78;border-radius:6px;padding:1px 6px">F5</kbd>, puis exporte en vidéo (Fichier → Exporter → Créer une vidéo).</p>
+        <label class="done"><input type="checkbox" id="donebox" ${SEEN[n]?'checked':''}> J’ai terminé ce cours</label></div>
+      <div class="navc">
+        ${n>1?`<a class="btn" href="#c-${n-1}">← Cours ${n-1}</a>`:'<span></span>'}
+        ${n<1000?`<a class="btn p" href="#c-${n+1}">Cours ${n+1} →</a>`:''}
+      </div>
+    </div>
+   </div>
+   <div class="box" style="margin-top:40px"><h4>🔁 Même technique, autres thèmes</h4><div class="rel">${same.map(x=>cardHTML(x,1)).join('')}</div></div>
+   <div class="box"><h4>${th.ic} Autres cours sur le thème « ${th.n} »</h4><div class="rel">${other.map(x=>cardHTML(x,1)).join('')}</div></div>`;
+  $('donebox').onchange=e=>{if(e.target.checked)SEEN[n]=1;else delete SEEN[n];saveSeen()};
+  document.body.classList.add('reading');document.title=`Cours ${n} — ${c.t}`;scrollTo(0,0);
+}
+function goList(){location.hash='';}
+function route(){const h=location.hash.match(/^#c-(\d+)$/);
+  if(h)showCourse(+h[1]);else{document.body.classList.remove('reading');document.title='Bibliothèque — 1000 cours d’animations PowerPoint';render()}}
+addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
